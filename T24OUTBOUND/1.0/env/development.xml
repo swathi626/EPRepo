@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="T24Outbound1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="apigateway"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="AuthenticationConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.common.security.AuthenticationConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.common.security&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:authenticationRequired>false&lt;/ns1:authenticationRequired>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="WebServiceConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;namedConfiguration CLASS_NAME=&quot;com.fiorano.services.libraries.t24.model.WebServiceConnectionConfiguration&quot;>
+    &lt;passwordFromVault>false&lt;/passwordFromVault>
+    &lt;customPasswordEncryption>false&lt;/customPasswordEncryption>
+    &lt;username>&lt;/username>
+    &lt;password>&lt;/password>
+    &lt;countryCode>&lt;/countryCode>
+    &lt;soap11>true&lt;/soap11>
+&lt;/namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="TAFJConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;namedConfiguration CLASS_NAME=&quot;com.fiorano.services.libraries.t24.model.TAFJConnectionConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot;>
+    &lt;passwordFromVault>false&lt;/passwordFromVault>
+    &lt;customPasswordEncryption>false&lt;/customPasswordEncryption>
+    &lt;securityPrincipal>&lt;/securityPrincipal>
+    &lt;securityCredential>&lt;/securityCredential>
+    &lt;applicationServer>JBoss 7.2&lt;/applicationServer>
+    &lt;lookupProperties>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>java.naming.factory.initial&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>org.jboss.naming.remote.client.InitialContextFactory&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>java.naming.provider.url&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>remote://localhost:4447&lt;/ns2:value>
+        &lt;/ns2:property>
+    &lt;/lookupProperties>
+    &lt;nodeName>&lt;/nodeName>
+&lt;/namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="TAFCConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;namedConfiguration CLASS_NAME=&quot;com.fiorano.services.libraries.t24.model.TAFCConnectionConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot;>
+    &lt;passwordFromVault>false&lt;/passwordFromVault>
+    &lt;customPasswordEncryption>false&lt;/customPasswordEncryption>
+    &lt;username>&lt;/username>
+    &lt;password>&lt;/password>
+    &lt;tafcConnectionProperties>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>Hosts&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>127.0.0.1&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>MinimumPoolSize&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>0&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>EnvironmentProperties&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>OFS_SOURCE=GCS&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>MaximumPoolSize&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>3&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>NaiveTrustManager&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>false&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>ActionTimeout&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>30&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>EnablePooling&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>true&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>Ports&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>2002&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>IdleTimeout&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>1800&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>Charset&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>UTF-8&lt;/ns2:value>
+        &lt;/ns2:property>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>SSL&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>false&lt;/ns2:value>
+        &lt;/ns2:property>
+    &lt;/tafcConnectionProperties>
+&lt;/namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="OFS WSDL Configuration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;namedConfiguration CLASS_NAME=&quot;com.fiorano.services.common.configuration.WSDLConfiguration&quot;>
+    &lt;loadWSDLFrom>File&lt;/loadWSDLFrom>
+&lt;/namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="Feeder1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="apigateway"/>
+    </target:instance-properties>
+    <target:configuration-properties/>
+  </target:instance>
+  <target:instance name="Display1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="apigateway"/>
+    </target:instance-properties>
+  </target:instance>
+</target:target>

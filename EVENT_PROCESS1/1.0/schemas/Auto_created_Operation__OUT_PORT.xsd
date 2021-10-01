@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.fiorano.com/services/serviceName" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ftns="http://www.fiorano.com/services/serviceName/Auto_created_Operation/Output" targetNamespace="http://www.fiorano.com/services/serviceName/Auto_created_Operation/Output">
+   <xsd:element name="Envelope">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="ftns:Header"/>
+            <xsd:element ref="ftns:Body"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Header">
+      <xsd:complexType>
+         <xsd:sequence/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Body">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:any/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

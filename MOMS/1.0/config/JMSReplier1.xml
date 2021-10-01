@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_26" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.edbc.jmsreplier.model.JMSReplierPM"> 
+  <void property="connectionConfig"> 
+   <void property="cfConfiguration"> 
+    <void property="url"> 
+     <string>http://localhost:1867</string> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="defaultReplyTo"> 
+   <string>SecondaryQueue</string> 
+  </void> 
+  <void property="defaultReplyToType"> 
+   <string>Queue</string> 
+  </void> 
+  <void property="destinationConfig"> 
+   <void property="destinationType"> 
+    <string>QUEUE</string> 
+   </void> 
+  </void> 
+  <void id="ProducerConfiguration0" property="producerConfig"/> 
+  <void property="producerConfig"> 
+   <object idref="ProducerConfiguration0"/> 
+  </void> 
+ </object> 
+</java> 

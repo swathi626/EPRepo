@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<layout>
+  <subflow name="FIORANO.ESTUDIO.ROOT_FLOW" x="0" y="0">
+    <service-instance name="HL7Sender1" x="353" y="117"/>
+    <service-instance name="HL7Receiver1" x="364" y="249"/>
+    <service-instance name="Feeder1" x="186" y="143"/>
+    <service-instance name="Display1" x="628" y="134"/>
+  </subflow>
+  <shortcut-routes/>
+</layout>

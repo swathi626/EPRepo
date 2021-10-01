@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="JMSIn1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="DestinationConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.DestinationConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:name>PrimaryTopic&lt;/ns1:name>
+    &lt;ns1:type>TOPIC&lt;/ns1:type>
+    &lt;ns1:lookupSupported>true&lt;/ns1:lookupSupported>
+    &lt;ns1:autoCreateSupported>true&lt;/ns1:autoCreateSupported>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="ConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.ConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:username>ayrton&lt;/ns1:username>
+    &lt;ns1:password>zcC6SXzF+bh4BGN4YJKKfw==&lt;/ns1:password>
+    &lt;ns1:cfConfiguration>
+        &lt;ns1:url>http://localhost:1867&lt;/ns1:url>
+        &lt;ns1:backupURLsRequired>false&lt;/ns1:backupURLsRequired>
+        &lt;ns1:backupURLs>&lt;/ns1:backupURLs>
+        &lt;ns1:connectionFactory>PrimaryCF&lt;/ns1:connectionFactory>
+    &lt;/ns1:cfConfiguration>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="JNDIConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.JNDIConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:initialContextFactory>fiorano.jms.runtime.naming.FioranoInitialContextFactory&lt;/ns1:initialContextFactory>
+    &lt;ns1:username>anonymous&lt;/ns1:username>
+    &lt;ns1:password>CVuEpOIpQJAIVeUQIs7kBQ==&lt;/ns1:password>
+    &lt;ns1:additionalProperties/>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="JMSOut1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="DestinationConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.DestinationConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:name>PrimaryTopic&lt;/ns1:name>
+    &lt;ns1:type>TOPIC&lt;/ns1:type>
+    &lt;ns1:lookupSupported>true&lt;/ns1:lookupSupported>
+    &lt;ns1:autoCreateSupported>true&lt;/ns1:autoCreateSupported>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="ConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.ConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:username>ayrton&lt;/ns1:username>
+    &lt;ns1:password>zcC6SXzF+bh4BGN4YJKKfw==&lt;/ns1:password>
+    &lt;ns1:cfConfiguration>
+        &lt;ns1:url>http://localhost:1867&lt;/ns1:url>
+        &lt;ns1:backupURLsRequired>false&lt;/ns1:backupURLsRequired>
+        &lt;ns1:backupURLs>&lt;/ns1:backupURLs>
+        &lt;ns1:connectionFactory>PrimaryCF&lt;/ns1:connectionFactory>
+    &lt;/ns1:cfConfiguration>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="JNDIConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.JNDIConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:initialContextFactory>fiorano.jms.runtime.naming.FioranoInitialContextFactory&lt;/ns1:initialContextFactory>
+    &lt;ns1:username>anonymous&lt;/ns1:username>
+    &lt;ns1:password>CVuEpOIpQJAIVeUQIs7kBQ==&lt;/ns1:password>
+    &lt;ns1:additionalProperties/>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="Display1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+  <target:instance name="JMSReplier1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="DestinationConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.DestinationConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:name>PrimaryTopic&lt;/ns1:name>
+    &lt;ns1:type>QUEUE&lt;/ns1:type>
+    &lt;ns1:lookupSupported>true&lt;/ns1:lookupSupported>
+    &lt;ns1:autoCreateSupported>true&lt;/ns1:autoCreateSupported>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="Error Destination Type" type="java.lang.String">Topic</target:property>
+      <target:property encrypt="false" name="Default JMSReplyTo Destination" type="java.lang.String">SecondaryQueue</target:property>
+      <target:property encrypt="false" name="Default JMSReplyTo Destination Type" type="java.lang.String">Queue</target:property>
+      <target:property encrypt="false" name="ConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.ConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:username>ayrton&lt;/ns1:username>
+    &lt;ns1:password>zcC6SXzF+bh4BGN4YJKKfw==&lt;/ns1:password>
+    &lt;ns1:cfConfiguration>
+        &lt;ns1:url>http://localhost:1867&lt;/ns1:url>
+        &lt;ns1:backupURLsRequired>false&lt;/ns1:backupURLsRequired>
+        &lt;ns1:backupURLs>http://localhost:1857&lt;/ns1:backupURLs>
+        &lt;ns1:connectionFactory>PrimaryCF&lt;/ns1:connectionFactory>
+    &lt;/ns1:cfConfiguration>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="Error Destination Name" type="java.lang.String"></target:property>
+      <target:property encrypt="false" name="Client ID" type="java.lang.String"></target:property>
+      <target:property encrypt="false" name="JNDIConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.JNDIConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:initialContextFactory>fiorano.jms.runtime.naming.FioranoInitialContextFactory&lt;/ns1:initialContextFactory>
+    &lt;ns1:username>anonymous&lt;/ns1:username>
+    &lt;ns1:password>CVuEpOIpQJAIVeUQIs7kBQ==&lt;/ns1:password>
+    &lt;ns1:additionalProperties/>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="JMSRequestor1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="DestinationConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.DestinationConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:name>PrimaryQueue&lt;/ns1:name>
+    &lt;ns1:type>QUEUE&lt;/ns1:type>
+    &lt;ns1:lookupSupported>true&lt;/ns1:lookupSupported>
+    &lt;ns1:autoCreateSupported>true&lt;/ns1:autoCreateSupported>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="ConnectionConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.ConnectionConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:username>ayrton&lt;/ns1:username>
+    &lt;ns1:password>zcC6SXzF+bh4BGN4YJKKfw==&lt;/ns1:password>
+    &lt;ns1:cfConfiguration>
+        &lt;ns1:url>http://localhost:1867&lt;/ns1:url>
+        &lt;ns1:backupURLsRequired>false&lt;/ns1:backupURLsRequired>
+        &lt;ns1:backupURLs>&lt;/ns1:backupURLs>
+        &lt;ns1:connectionFactory>PrimaryCF&lt;/ns1:connectionFactory>
+    &lt;/ns1:cfConfiguration>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="JNDIConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.libraries.jms.configuration.JNDIConfiguration&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot; xmlns:ns1=&quot;uri:com.fiorano.services.libraries.jms.configuration&quot;>
+    &lt;ns1:initialContextFactory>fiorano.jms.runtime.naming.FioranoInitialContextFactory&lt;/ns1:initialContextFactory>
+    &lt;ns1:username>anonymous&lt;/ns1:username>
+    &lt;ns1:password>CVuEpOIpQJAIVeUQIs7kBQ==&lt;/ns1:password>
+    &lt;ns1:additionalProperties/>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+</target:target>

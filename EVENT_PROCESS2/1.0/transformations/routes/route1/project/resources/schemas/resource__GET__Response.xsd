@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:tns="http://www.fiorano.com/services/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wadl="http://wadl.dev.java.net/2009/02" targetNamespace="http://www.fiorano.com/services/rest">
+   <xsd:element name="Responses">
+      <xsd:complexType>
+         <xsd:choice>
+            <xsd:element name="Response">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="Representations">
+                        <xsd:complexType>
+                           <xsd:choice>
+                              <xsd:element name="Representation">
+                                 <xsd:complexType>
+                                    <xsd:sequence>
+                                       <xsd:element name="Element">
+                                          <xsd:complexType>
+                                             <xsd:sequence>
+                                                <xsd:any />
+                                             </xsd:sequence>
+                                          </xsd:complexType>
+                                       </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute default="" name="MediaType" type="xsd:string" use="optional" />
+                                 </xsd:complexType>
+                              </xsd:element>
+                           </xsd:choice>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute default="200" name="Status" type="xsd:int" use="optional" />
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:choice>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

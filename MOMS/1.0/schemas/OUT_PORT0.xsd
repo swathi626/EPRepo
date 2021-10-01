@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.fiorano.com/fesb/activity/JMSIn1/jmsIn/Out" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/fesb/activity/JMSIn1/jmsIn/Out">
+   <xsd:element name="Message">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="Body" type="xsd:string"/>
+            <xsd:element name="SentMessage" type="xsd:string"/>
+            <xsd:element name="Properties">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element minOccurs="0" maxOccurs="unbounded" name="Property">
+                        <xsd:complexType>
+                           <xsd:simpleContent>
+                              <xsd:extension base="xsd:string">
+                                 <xsd:attribute name="name" type="xsd:string"/>
+                                 <xsd:attribute name="value" type="xsd:string"/>
+                              </xsd:extension>
+                           </xsd:simpleContent>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="JMSHeaders">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element minOccurs="0" name="JMSMessageID" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSCorrelationID" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSDeliveryMode" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSTimeStamp" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSReplyTo" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSPriorityTag" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSExpiration" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSRedelivered" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSDestination" type="xsd:string"/>
+                     <xsd:element minOccurs="0" name="JMSTypeTag" type="xsd:string"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

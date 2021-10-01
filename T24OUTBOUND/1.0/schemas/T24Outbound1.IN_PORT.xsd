@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:fns="http://www.fiorano.com/fesb/activity/T24Outbound1/T24Out" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.fiorano.com/fesb/activity/T24Outbound1/T24Out">
+   <xsd:complexType name="T24OutboundConnectionProperties">
+      <xsd:sequence>
+         <xsd:element minOccurs="0" name="T24ConnectionType">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="WebService"/>
+                  <xsd:enumeration value="TAFC"/>
+                  <xsd:enumeration value="TAFJ-EJB"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:element>
+         <xsd:element minOccurs="0" name="ConnectionProperties">
+            <xsd:complexType>
+               <xsd:choice>
+                  <xsd:element minOccurs="0" name="WebService">
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element minOccurs="0" name="OFSConnectorWSDLConfig">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="LoadWSDLFrom">
+                                       <xsd:simpleType>
+                                          <xsd:restriction base="xsd:string">
+                                             <xsd:enumeration value="File"/>
+                                             <xsd:enumeration value="URL"/>
+                                          </xsd:restriction>
+                                       </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="WSDLFile" type="xsd:string"/>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                           <xsd:element minOccurs="0" name="T24AuthenticationConfig">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="T24UserName" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="T24Password" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="T24CompanyCode" type="xsd:string"/>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="TAFC">
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element minOccurs="0" name="TAFCConfiguration">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="UserName" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="Password" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="TAFCAgentConnectionProperties">
+                                       <xsd:complexType>
+                                          <xsd:sequence>
+                                             <xsd:element minOccurs="0" maxOccurs="unbounded" name="TAFCAgentProperty">
+                                                <xsd:complexType>
+                                                   <xsd:sequence>
+                                                      <xsd:element name="Name" type="xsd:string"/>
+                                                      <xsd:element name="Value" type="xsd:string"/>
+                                                   </xsd:sequence>
+                                                </xsd:complexType>
+                                             </xsd:element>
+                                          </xsd:sequence>
+                                       </xsd:complexType>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="TAFJ-EJB">
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element minOccurs="0" name="TAFJConfiguration">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="SecurityPrincipal" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="SecurityPassword" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="NodeName" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="TAFJAgentConnectionProperties">
+                                       <xsd:complexType>
+                                          <xsd:sequence>
+                                             <xsd:element minOccurs="0" maxOccurs="unbounded" name="TAFJAgentProperty">
+                                                <xsd:complexType>
+                                                   <xsd:sequence>
+                                                      <xsd:element name="Name" type="xsd:string"/>
+                                                      <xsd:element name="Value" type="xsd:string"/>
+                                                   </xsd:sequence>
+                                                </xsd:complexType>
+                                             </xsd:element>
+                                          </xsd:sequence>
+                                       </xsd:complexType>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:choice>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Body" type="xsd:string"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="Message" type="fns:T24OutboundConnectionProperties"/>
+</xsd:schema>

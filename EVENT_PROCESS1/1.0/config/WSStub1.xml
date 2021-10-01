@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_231" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.services.wsstub.configuration.WSStubPM"> 
+  <void property="additionalConfiguration"> 
+   <void property="port"> 
+    <string></string> 
+   </void> 
+   <void property="publicHost"> 
+    <string></string> 
+   </void> 
+   <void property="targetNamespace"> 
+    <string></string> 
+   </void> 
+  </void> 
+  <void property="attachmentsConfiguration"> 
+   <void property="attachmentsDirectory"> 
+    <string></string> 
+   </void> 
+   <void property="timeStampFormat"> 
+    <string>ddMMyyyy_HHmmssSSS</string> 
+   </void> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1300</int> 
+  </void> 
+  <void property="encryptDecryptElementsMap"> 
+   <void method="put"> 
+    <string>SOAP11_Auto_created_Operation_REQUEST</string> 
+    <object class="com.fiorano.services.common.configuration.EncryptDecryptElements"/> 
+   </void> 
+   <void method="put"> 
+    <string>SOAP11_Auto_created_Operation_RESPONSE</string> 
+    <object class="com.fiorano.services.common.configuration.EncryptDecryptElements"/> 
+   </void> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="fesConnectionConfig"> 
+   <void property="password" isEncrypted="true"> 
+    <string>DMSLzKckc/JLgIUhIpdeyw==</string> 
+   </void> 
+  </void> 
+  <void property="transportConfiguration"> 
+   <void property="connectionConfiguration"> 
+    <void property="password" isEncrypted="true"> 
+     <string>zcC6SXzF+bh4BGN4YJKKfw==</string> 
+    </void> 
+   </void> 
+   <void property="jndiConfiguration"> 
+    <void property="password" isEncrypted="true"> 
+     <string>CVuEpOIpQJAIVeUQIs7kBQ==</string> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="transportSecurityConfiguration"> 
+   <void property="httpAuthConfiguration"> 
+    <void property="password" isEncrypted="true"> 
+     <string>DMSLzKckc/JLgIUhIpdeyw==</string> 
+    </void> 
+    <void property="useHTTPAuth"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="username"> 
+     <string>admin</string> 
+    </void> 
+   </void> 
+   <void property="sslConfiguration"> 
+    <void property="acceptServerCertificate"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="ignoreHostnameMismatch"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="keyClientPassword" isEncrypted="true"> 
+     <string>jso/VCwio7gbSB9CjSJkUA==</string> 
+    </void> 
+    <void property="keyStoreLocation"> 
+     <string>F:\jars\2waySSL\fiorano.jks</string> 
+    </void> 
+    <void property="keyStorePassword" isEncrypted="true"> 
+     <string>jso/VCwio7gbSB9CjSJkUA==</string> 
+    </void> 
+    <void property="trustStoreLocation"> 
+     <string>F:\jars\2waySSL\fiorano.jks</string> 
+    </void> 
+    <void property="trustStorePassword" isEncrypted="true"> 
+     <string>jso/VCwio7gbSB9CjSJkUA==</string> 
+    </void> 
+    <void property="useSSL"> 
+     <boolean>true</boolean> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="wsDefinitionConfiguration"> 
+   <void property="wsdl"> 
+    <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;wsdl:definitions targetNamespace=&quot;http://www.fiorano.com/services/serviceName&quot; xmlns=&quot;http://www.fiorano.com/services/serviceName&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:wsdlsoap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:wsdlsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot;&gt;&#13;
+  &lt;wsdl:message name=&quot;Auto_created_OperationResponse&quot;&gt;&#13;
+  &lt;/wsdl:message&gt;&#13;
+  &lt;wsdl:message name=&quot;Auto_created_OperationRequest&quot;&gt;&#13;
+  &lt;/wsdl:message&gt;&#13;
+  &lt;wsdl:portType name=&quot;Auto_created_PortType&quot;&gt;&#13;
+    &lt;wsdl:operation name=&quot;Auto_created_Operation&quot;&gt;&#13;
+      &lt;wsdl:input name=&quot;Auto_created_Input&quot; message=&quot;Auto_created_OperationRequest&quot;&gt;&#13;
+    &lt;/wsdl:input&gt;&#13;
+      &lt;wsdl:output name=&quot;Auto_created_Output&quot; message=&quot;Auto_created_OperationResponse&quot;&gt;&#13;
+    &lt;/wsdl:output&gt;&#13;
+    &lt;/wsdl:operation&gt;&#13;
+  &lt;/wsdl:portType&gt;&#13;
+  &lt;wsdl:binding name=&quot;Auto_created_Binding&quot; type=&quot;Auto_created_PortType&quot;&gt;&#13;
+    &lt;wsdlsoap:binding style=&quot;document&quot; transport=&quot;http://schemas.xmlsoap.org/soap/http&quot;/&gt;&#13;
+    &lt;wsdl:operation name=&quot;Auto_created_Operation&quot;&gt;&#13;
+      &lt;wsdlsoap:operation soapAction=&quot;Auto_created_Operation&quot; style=&quot;document&quot;/&gt;&#13;
+      &lt;wsdl:input name=&quot;Auto_created_Input&quot;&gt;&#13;
+        &lt;wsdlsoap:body use=&quot;literal&quot; encodingStyle=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;/&gt;&#13;
+      &lt;/wsdl:input&gt;&#13;
+      &lt;wsdl:output name=&quot;Auto_created_Output&quot;&gt;&#13;
+        &lt;wsdlsoap:body use=&quot;literal&quot; encodingStyle=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;/&gt;&#13;
+      &lt;/wsdl:output&gt;&#13;
+    &lt;/wsdl:operation&gt;&#13;
+  &lt;/wsdl:binding&gt;&#13;
+  &lt;wsdl:service name=&quot;Auto_created_Service&quot;&gt;&#13;
+    &lt;wsdl:port name=&quot;Auto_created_Port1&quot; binding=&quot;Auto_created_Binding&quot;&gt;&#13;
+      &lt;wsdlsoap:address location=&quot;http://localhost:1880/bcwsgateway/services/Auto_created_Service&quot;/&gt;&#13;
+    &lt;/wsdl:port&gt;&#13;
+  &lt;/wsdl:service&gt;&#13;
+&lt;/wsdl:definitions&gt;&#13;
+</string> 
+   </void> 
+  </void> 
+ </object> 
+</java> 

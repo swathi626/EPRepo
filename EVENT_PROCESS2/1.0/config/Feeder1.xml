@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_231" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.bc.feeder.model.FeederPM"> 
+  <void property="attachment"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1300</int> 
+  </void> 
+  <void property="defaultMessage"> 
+   <string>&lt;ns1:Request xmlns:ns1=&quot;http://www.fiorano.com/services/rest&quot;&gt;
+
+   &lt;Parameters&gt;
+      &lt;Parameter name=&quot;name&quot; style=&quot;style&quot;&gt;string&lt;/Parameter&gt;
+   &lt;/Parameters&gt;
+&lt;/ns1:Request&gt;</string> 
+  </void> 
+  <void property="elementsToEncrypt"> 
+   <object class="com.fiorano.services.common.configuration.EncryptDecryptElements"> 
+    <void property="namespaces"> 
+     <void method="put"> 
+      <string>xsd</string> 
+      <string>http://www.w3.org/2001/XMLSchema</string> 
+     </void> 
+     <void method="put"> 
+      <string>xml</string> 
+      <string>http://www.w3.org/XML/1998/namespace</string> 
+     </void> 
+     <void method="put"> 
+      <string>ns1</string> 
+      <string>http://www.fiorano.com/services/rest</string> 
+     </void> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="header"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="schema"> 
+   <object class="fiorano.esb.record.ESBRecordDefinition"> 
+    <void property="rootElementName"> 
+     <string>Request</string> 
+    </void> 
+    <void property="structure"> 
+     <string>&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;xsd:schema xmlns:tns=&quot;http://www.fiorano.com/services/rest&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:wadl=&quot;http://wadl.dev.java.net/2009/02&quot; targetNamespace=&quot;http://www.fiorano.com/services/rest&quot;&gt;
+   &lt;xsd:element name=&quot;Request&quot;&gt;
+      &lt;xsd:complexType&gt;
+         &lt;xsd:sequence&gt;
+            &lt;xsd:element minOccurs=&quot;0&quot; name=&quot;ResourceURL&quot; type=&quot;xsd:string&quot; /&gt;
+            &lt;xsd:element minOccurs=&quot;0&quot; name=&quot;ResourceParameters&quot;&gt;
+               &lt;xsd:complexType&gt;
+                  &lt;xsd:sequence&gt;
+                     &lt;xsd:element minOccurs=&quot;0&quot; name=&quot;resource&quot;&gt;
+                        &lt;xsd:complexType&gt;
+                           &lt;xsd:sequence /&gt;
+                        &lt;/xsd:complexType&gt;
+                     &lt;/xsd:element&gt;
+                  &lt;/xsd:sequence&gt;
+               &lt;/xsd:complexType&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element minOccurs=&quot;0&quot; name=&quot;Parameters&quot;&gt;
+               &lt;xsd:complexType&gt;
+                  &lt;xsd:sequence&gt;
+                     &lt;xsd:element minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; name=&quot;Parameter&quot;&gt;
+                        &lt;xsd:complexType&gt;
+                           &lt;xsd:simpleContent&gt;
+                              &lt;xsd:extension base=&quot;xsd:string&quot;&gt;
+                                 &lt;xsd:attribute name=&quot;name&quot; type=&quot;xsd:string&quot; use=&quot;required&quot; /&gt;
+                                 &lt;xsd:attribute name=&quot;style&quot; use=&quot;optional&quot; /&gt;
+                              &lt;/xsd:extension&gt;
+                           &lt;/xsd:simpleContent&gt;
+                        &lt;/xsd:complexType&gt;
+                     &lt;/xsd:element&gt;
+                  &lt;/xsd:sequence&gt;
+               &lt;/xsd:complexType&gt;
+            &lt;/xsd:element&gt;
+         &lt;/xsd:sequence&gt;
+      &lt;/xsd:complexType&gt;
+   &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;</string> 
+    </void> 
+    <void property="targetNamespace"> 
+     <string>http://www.fiorano.com/services/rest</string> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

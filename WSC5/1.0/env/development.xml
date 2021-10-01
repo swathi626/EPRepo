@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="WebServiceConsumer1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="WSDL URL" type="java.lang.String">http://192.168.1.95:1880/bcwsgateway/services/Auto_created_Service?wsdl</target:property>
+      <target:property encrypt="false" name="HTTPAuthConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.services.common.security.HTTPAuthConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.services.common.security&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:useHTTPAuth>false&lt;/ns1:useHTTPAuth>
+    &lt;ns1:type>BASIC&lt;/ns1:type>
+    &lt;ns1:port>80&lt;/ns1:port>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="Load WSDL From" type="java.lang.String">URL</target:property>
+      <target:property encrypt="false" name="WSDL File" type="java.io.File"></target:property>
+      <target:property encrypt="false" name="End Point Address" type="java.lang.String">http://192.168.1.95:1880/bcwsgateway/services/Auto_created_Service</target:property>
+      <target:property encrypt="false" name="Port Name" type="java.lang.String">Auto_created_Port1</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="Feeder1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties/>
+  </target:instance>
+  <target:instance name="Display1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
+</target:target>
